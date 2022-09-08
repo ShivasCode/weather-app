@@ -1,60 +1,70 @@
 <template>
-  <div class="container">
-    <form @submit.prevent="onSubmit">
-      <input v-model="city_query" type="text" name="" id="" />
-      <button type="submit">Search</button>
-    </form>
+  <div class="bg-color">
     <div class="container">
-      <div class="">
-        <div class="wrapper">
-          <div v-for="info in infos">
-            <div class="card" style="color: #4b515d; border-radius: 35px">
-              <div class="card-body p-4">
-                <div class="d-flex">
-                  <h6 class="flex-grow-1">
-                    {{ info.name }}, {{ info.sys.country }}
-                  </h6>
-                  <h6>
-                    <!-- {{ infos.lastupdate }} -->
-                  </h6>
-                </div>
-
-                <div class="d-flex flex-column text-center mt-5 mb-4">
-                  <h6
-                    class="display-4 mb-2 font-weight-bold"
-                    style="color: #1c2331"
-                  >
-                    {{ info.main.temp }} C
-                  </h6>
-                  <span style="color: #868b94">
-                    <h6 class="mb-0">
-                      <strong>{{ info.weather[0]["main"] }}</strong>
+      <div class="main-nav">
+        <form class="align" @submit.prevent="onSubmit">
+          <div class="d-flex w-50 mx-auto mb-5">
+            <input
+              class="form-control mr-1"
+              placeholder="Search for a city"
+              v-model="city_query"
+            />
+            <button class="btn btn-secondary">enter</button>
+          </div>
+        </form>
+      </div>
+      <div class="container">
+        <div class="">
+          <div class="wrapper">
+            <div v-for="info in infos">
+              <div class="card" style="color: #4b515d; border-radius: 35px">
+                <div class="card-body p-4">
+                  <div class="d-flex">
+                    <h6 class="flex-grow-1">
+                      {{ info.name }}, {{ info.sys.country }}
                     </h6>
-                    <div class="small">
-                      {{ info.weather[0]["description"] }}
-                    </div>
-                  </span>
-                </div>
-
-                <div class="d-flex align-items-center">
-                  <div class="flex-grow-1" style="font-size: 1rem">
-                    <div>
-                      <i class="fas fa-wind fa-fw" style="color: #868b94"></i>
-                      <span class="ms-1">
-                        {{ (info.wind.speed * kmh).toFixed(2) }} km/h
-                      </span>
-                    </div>
-                    <div>
-                      <i class="fas fa-tint fa-fw" style="color: #868b94"></i>
-                      <span class="ms-1">
-                        {{ info.main.humidity }}% Humidity
-                      </span>
-                    </div>
+                    <h6>
+                      <!-- {{ infos.lastupdate }} -->
+                    </h6>
                   </div>
-                  <div>
-                    <img
-                      :src="`http://openweathermap.org/img/w/${info.weather[0]['icon']}.png`"
-                    />
+
+                  <div class="d-flex flex-column text-center mt-5 mb-4">
+                    <h6
+                      class="display-4 mb-2 font-weight-bold"
+                      style="color: #1c2331"
+                    >
+                      {{ info.main.temp }} C
+                    </h6>
+                    <span style="color: #868b94">
+                      <h6 class="mb-0">
+                        <strong>{{ info.weather[0]["main"] }}</strong>
+                      </h6>
+                      <div class="small">
+                        {{ info.weather[0]["description"] }}
+                      </div>
+                    </span>
+                  </div>
+
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem">
+                      <div>
+                        <i class="fas fa-wind fa-fw" style="color: #868b94"></i>
+                        <span class="ms-1">
+                          {{ (info.wind.speed * kmh).toFixed(2) }} km/h
+                        </span>
+                      </div>
+                      <div>
+                        <i class="fas fa-tint fa-fw" style="color: #868b94"></i>
+                        <span class="ms-1">
+                          {{ info.main.humidity }}% Humidity
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <img
+                        :src="`http://openweathermap.org/img/w/${info.weather[0]['icon']}.png`"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -134,10 +144,33 @@ export default {
 </script>
 
 <style>
+.bg-color {
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(97, 186, 255, 1) 0%,
+    rgba(166, 239, 253, 1) 90.1%
+  );
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1em;
-  grid-auto-rows: minmax(1000px, auto);
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+.input-size {
+  margin: auto;
+  width: 50%;
+}
+.main-nav {
+  padding-top: 100px;
+}
+.align {
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
 }
 </style>
