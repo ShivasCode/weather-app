@@ -114,11 +114,23 @@ export default {
         if (this.error) {
           this.error = null;
         }
-        this.infos.push(response1.data);
+        this.infos.unshift(response1.data);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
+        if (error.response) {
+          this.error = error.response.data.message;
+        }
       }
     },
+    // async deleteCity() {
+    //   const endpoint = `/api/${this.cities.id}/`;
+    //   try {
+    //     await axios.delete(endpoint);
+    //     this.infos.splice(this.infos.indexOf(this.cities.id), 1); //changes the contents of an array by removing or replacing existing elements and/or adding new elements in place
+    //   } catch (error) {
+    //     console.log(error.response);
+    //   }
+    // },
     // async getWeather() {
     //   let endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${this.city_query}&units=metric&appid=50fa221d32e710d1045aad7ee9da01a8`;
 
