@@ -1,9 +1,9 @@
 <template>
   <div class="bg-color">
     <div class="container">
-      <div class="main-nav">
-        <form class="align" @submit.prevent="onSubmit">
-          <div class="d-flex w-50 mx-auto mb-5">
+      <div class="main-nav mb-5">
+        <form @submit.prevent="onSubmit">
+          <div class="d-flex w-50 mx-auto">
             <input
               class="form-control mr-1"
               placeholder="Search for a city"
@@ -12,7 +12,9 @@
             <button class="btn btn-secondary">enter</button>
           </div>
         </form>
+        <p class="text-center" v-if="error">{{ error }}</p>
       </div>
+
       <div class="container">
         <div class="">
           <div class="wrapper">
@@ -90,33 +92,43 @@ export default {
       cities: [],
       name: {},
       kmh: 3.6,
+      error: "",
     };
   },
   computed: {},
   methods: {
     async onSubmit() {
-      await this.getWeather();
+      if (!this.city_query) {
+        this.error = "You can't enter an empty city";
+        return;
+      }
+      let endpoint1 = `https://api.openweathermap.org/data/2.5/weather?q=${this.city_query}&units=metric&appid=50fa221d32e710d1045aad7ee9da01a8`;
+      let endpoint2 = "/api/";
 
-      let endpoint = "/api/";
       try {
-        const response = await axios.post(endpoint, {
+        const response1 = await axios.get(endpoint1);
+        const response2 = await axios.post(endpoint2, {
           city_name: this.city_query,
         });
-        console.log(response);
+        this.city_query = null;
+        if (this.error) {
+          this.error = null;
+        }
+        this.infos.push(response1.data);
       } catch (error) {
         console.log(error);
       }
     },
-    async getWeather() {
-      let endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${this.city_query}&units=metric&appid=50fa221d32e710d1045aad7ee9da01a8`;
+    // async getWeather() {
+    //   let endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${this.city_query}&units=metric&appid=50fa221d32e710d1045aad7ee9da01a8`;
 
-      try {
-        const response = await axios.get(endpoint);
-        console.log(response);
-      } catch (error) {
-        console.log(error);
-      }
-    },
+    //   try {
+    //     const response = await axios.get(endpoint);
+    //     console.log(response);
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // },
     async getPreviousWeather() {
       let endpoint = "/api/";
       let promises = [];
@@ -150,6 +162,7 @@ export default {
     rgba(97, 186, 255, 1) 0%,
     rgba(166, 239, 253, 1) 90.1%
   );
+  height: 2000px;
 }
 
 .wrapper {
@@ -166,7 +179,7 @@ export default {
   width: 50%;
 }
 .main-nav {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 .align {
   position: relative;
