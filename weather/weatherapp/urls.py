@@ -6,6 +6,6 @@ from .views import CityListView, CityRUDView
 
 urlpatterns = [
     path('api/', CityListView.as_view()),
-    path('api/<int:pk>/',CityRUDView.as_view())
-    
+    path('api/<slug:slug>/',CityRUDView.as_view())
+
 ]

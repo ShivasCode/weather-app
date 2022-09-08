@@ -13,6 +13,6 @@ class CityListView(generics.ListCreateAPIView):
 class CityRUDView(generics.RetrieveUpdateDestroyAPIView):
     queryset = City.objects.all()
     serializer_class = CitySerializer
-    lookup_field = 'pk'
+    lookup_field = 'slug'
 
 

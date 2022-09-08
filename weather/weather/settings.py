@@ -145,3 +145,51 @@ LOGGING = {
         },
     },
 }
+
+LOGGING ={
+    'version':1,
+    'loggers':{
+        'django':{
+            'handlers':['log1','log2', 'log3','log4'],
+            'level':'DEBUG'
+        }
+    },
+    'handlers':{
+        'log1':{
+            'level':'INFO',
+            'class': 'logging.FileHandler',
+            'filename':'/Users/shiva/assignment/logs/debug1.log',
+        },
+        'log2':{
+            'level':'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename':'/Users/shiva/assignment/logs/debug2.log',
+            'formatter':'basic',
+        },
+        'log3':{
+            'level':'WARNING',
+            'class': 'logging.FileHandler',
+            'filename':'/Users/shiva/assignment/logs/debug3.log',
+            'formatter':'basic',
+        },
+        'log4':{
+            'level':'ERROR',
+            'class': 'logging.FileHandler',
+            'filename':'/Users/shiva/assignment/logs/debug4.log',
+            'formatter':'basic',
+        },
+        'log5':{
+            'level':'CRITICAL',
+            'class': 'logging.FileHandler',
+            'filename':'/Users/shiva/assignment/logs/debug5.log',
+            'formatter':'basic',
+        }
+    },
+    'formatters':{
+        'basic': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        }
+
+    }
+}

@@ -5,9 +5,10 @@ from rest_framework.validators import UniqueValidator
 from .models import City 
 
 class CitySerializer(serializers.ModelSerializer):
-    class Meta: 
+    slug = serializers.SlugField(read_only=True)
+    class Meta:
         model = City 
-        fields = ('city_name', )
+        exclude = ('id',)
         extra_kwargs = {
         'city_name': {
             'validators': [

@@ -25,9 +25,12 @@
                     <h6 class="flex-grow-1">
                       {{ info.name }}, {{ info.sys.country }}
                     </h6>
-                    <h6>
-                      <!-- {{ infos.lastupdate }} -->
-                    </h6>
+                    <i
+                      @click="deleteCity(info)"
+                      class="fa fa-trash"
+                      aria-hidden="true"
+                      style="cursor: pointer"
+                    ></i>
                   </div>
 
                   <div class="d-flex flex-column text-center mt-5 mb-4">
@@ -89,7 +92,7 @@ export default {
     return {
       city_query: null,
       infos: [],
-      cities: [],
+      cities: {},
       name: {},
       kmh: 3.6,
       error: "",
@@ -116,21 +119,21 @@ export default {
         }
         this.infos.unshift(response1.data);
       } catch (error) {
-        // console.log(error);
+        console.log(error);
         if (error.response) {
           this.error = error.response.data.message;
         }
       }
     },
-    // async deleteCity() {
-    //   const endpoint = `/api/${this.cities.id}/`;
-    //   try {
-    //     await axios.delete(endpoint);
-    //     this.infos.splice(this.infos.indexOf(this.cities.id), 1); //changes the contents of an array by removing or replacing existing elements and/or adding new elements in place
-    //   } catch (error) {
-    //     console.log(error.response);
-    //   }
-    // },
+    async deleteCity(info) {
+      let endpoint = `/api/${info.name.toLowerCase()}/`;
+      try {
+        const response2 = await axios.delete(endpoint);
+        location.reload();
+      } catch (error) {
+        console.log(error);
+      }
+    },
     // async getWeather() {
     //   let endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${this.city_query}&units=metric&appid=50fa221d32e710d1045aad7ee9da01a8`;
 
@@ -174,7 +177,7 @@ export default {
     rgba(97, 186, 255, 1) 0%,
     rgba(166, 239, 253, 1) 90.1%
   );
-  height: 2000px;
+  min-height: 1000px;
 }
 
 .wrapper {

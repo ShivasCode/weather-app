@@ -1,0 +1,11 @@
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 1322
+"GET /api/ HTTP/1.1" 200 24
+"GET / HTTP/1.1" 200 1322
+"GET /api/ HTTP/1.1" 200 24
+"GET /api/v1/ HTTP/1.1" 200 1322
+"GET /api/ HTTP/1.1" 200 8430
+"GET /favicon.ico HTTP/1.1" 200 1322
+"POST /api/ HTTP/1.1" 201 8422
+"GET /favicon.ico HTTP/1.1" 200 1322
+C:\Users\shiva\assignment\weather\weather\settings.py changed, reloading.
