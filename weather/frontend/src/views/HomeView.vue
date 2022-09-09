@@ -169,15 +169,6 @@ export default {
 </script>
 
 <style>
-.bg-color {
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(97, 186, 255, 1) 0%,
-    rgba(166, 239, 253, 1) 90.1%
-  );
-  min-height: 1000px;
-}
-
 .wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

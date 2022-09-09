@@ -1759,3 +1759,36 @@ Watching for file changes with StatReloader
 "GET /api/ HTTP/1.1" 200 162
 C:\Users\shiva\assignment\weather\templates\index.html changed, reloading.
 Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 1322
+"GET /api/ HTTP/1.1" 200 162
+"GET / HTTP/1.1" 200 1322
+"GET /api/ HTTP/1.1" 200 162
+C:\Users\shiva\assignment\weather\templates\index.html changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 1322
+"GET /api/ HTTP/1.1" 200 162
+"GET /api/ HTTP/1.1" 200 162
+C:\Users\shiva\assignment\weather\templates\index.html changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/ HTTP/1.1" 200 162
+C:\Users\shiva\assignment\weather\templates\index.html changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/ HTTP/1.1" 200 162
+C:\Users\shiva\assignment\weather\templates\index.html changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 1322
+"GET / HTTP/1.1" 200 1322
+"GET /api/ HTTP/1.1" 200 162
+"GET /api/ HTTP/1.1" 200 162
+C:\Users\shiva\assignment\weather\templates\index.html changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 1597
+"GET / HTTP/1.1" 200 1597
+"GET /api/ HTTP/1.1" 200 162
+C:\Users\shiva\assignment\weather\templates\index.html changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 1547
+"GET / HTTP/1.1" 200 1547
+"GET /api/ HTTP/1.1" 200 162
+C:\Users\shiva\assignment\weather\templates\index.html changed, reloading.
+Watching for file changes with StatReloader
