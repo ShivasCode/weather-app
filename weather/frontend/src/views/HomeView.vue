@@ -40,10 +40,8 @@
                     >
                       {{ info.main.temp }} C
                     </h6>
+
                     <span style="color: #868b94">
-                      <h6 class="mb-0">
-                        <strong>{{ info.weather[0]["main"] }}</strong>
-                      </h6>
                       <div class="small">
                         {{ info.weather[0]["description"] }}
                       </div>
