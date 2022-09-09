@@ -1,0 +1,409 @@
+WARNING 2022-09-08 23:38:17,579 base Method Not Allowed (DELETE): /api/manila
+WARNING 2022-09-08 23:38:17,580 log Method Not Allowed: /api/manila
+WARNING 2022-09-08 23:38:17,581 basehttp "DELETE /api/manila HTTP/1.1" 405 0
+WARNING 2022-09-08 23:38:42,495 base Method Not Allowed (DELETE): /api/manila
+WARNING 2022-09-08 23:38:42,498 log Method Not Allowed: /api/manila
+WARNING 2022-09-08 23:38:42,499 basehttp "DELETE /api/manila HTTP/1.1" 405 0
+WARNING 2022-09-08 23:38:44,436 base Method Not Allowed (DELETE): /api/manila
+WARNING 2022-09-08 23:38:44,437 log Method Not Allowed: /api/manila
+WARNING 2022-09-08 23:38:44,437 basehttp "DELETE /api/manila HTTP/1.1" 405 0
+WARNING 2022-09-08 23:40:57,491 log Not Found: /api/davao/
+WARNING 2022-09-08 23:40:57,492 basehttp "DELETE /api/davao/ HTTP/1.1" 404 23
+WARNING 2022-09-09 09:59:06,650 base Method Not Allowed (DELETE): /api/hong kong/
+WARNING 2022-09-09 09:59:06,651 log Method Not Allowed: /api/hong kong/
+WARNING 2022-09-09 09:59:06,651 basehttp "DELETE /api/hong%20kong/ HTTP/1.1" 405 0
+ERROR 2022-09-09 09:59:42,087 log Internal Server Error: /api/japan/
+Traceback (most recent call last):
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: delete() got an unexpected keyword argument 'slug'
+ERROR 2022-09-09 09:59:42,090 basehttp "DELETE /api/japan/ HTTP/1.1" 500 90341
+ERROR 2022-09-09 09:59:52,130 log Internal Server Error: /api/japan/
+Traceback (most recent call last):
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: delete() got an unexpected keyword argument 'slug'
+ERROR 2022-09-09 09:59:52,132 basehttp "DELETE /api/japan/ HTTP/1.1" 500 90341
+ERROR 2022-09-09 10:00:39,221 log Internal Server Error: /api/batangas/
+Traceback (most recent call last):
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: delete() got an unexpected keyword argument 'slug'
+ERROR 2022-09-09 10:00:39,225 basehttp "DELETE /api/batangas/ HTTP/1.1" 500 90404
+ERROR 2022-09-09 10:00:44,371 log Internal Server Error: /api/batangas/
+Traceback (most recent call last):
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: delete() got an unexpected keyword argument 'slug'
+ERROR 2022-09-09 10:00:44,373 basehttp "DELETE /api/batangas/ HTTP/1.1" 500 90404
+ERROR 2022-09-09 10:01:17,922 log Internal Server Error: /api/batangas/
+Traceback (most recent call last):
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: delete() got an unexpected keyword argument 'slug'
+ERROR 2022-09-09 10:01:17,927 basehttp "DELETE /api/batangas/ HTTP/1.1" 500 90404
+ERROR 2022-09-09 10:01:26,539 log Internal Server Error: /api/japan/
+Traceback (most recent call last):
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: delete() got an unexpected keyword argument 'slug'
+ERROR 2022-09-09 10:01:26,541 basehttp "DELETE /api/japan/ HTTP/1.1" 500 90341
+ERROR 2022-09-09 10:02:00,814 log Internal Server Error: /api/batangas/
+Traceback (most recent call last):
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: delete() got an unexpected keyword argument 'slug'
+ERROR 2022-09-09 10:02:00,817 basehttp "DELETE /api/batangas/ HTTP/1.1" 500 90404
+ERROR 2022-09-09 10:02:27,609 log Internal Server Error: /api/batangas/
+Traceback (most recent call last):
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'slug'
+ERROR 2022-09-09 10:02:27,612 basehttp "GET /api/batangas/ HTTP/1.1" 500 90289
+WARNING 2022-09-09 10:03:20,769 log Not Found: /api/batangas/
+WARNING 2022-09-09 10:03:20,770 basehttp "DELETE /api/batangas/ HTTP/1.1" 404 23
+WARNING 2022-09-09 10:04:30,560 base Method Not Allowed (DELETE): /api/hong kong/
+WARNING 2022-09-09 10:04:30,561 log Method Not Allowed: /api/hong kong/
+WARNING 2022-09-09 10:04:30,561 basehttp "DELETE /api/hong%20kong/ HTTP/1.1" 405 0
+WARNING 2022-09-09 10:04:57,208 base Method Not Allowed (DELETE): /api/new york/
+WARNING 2022-09-09 10:04:57,208 log Method Not Allowed: /api/new york/
+WARNING 2022-09-09 10:04:57,209 basehttp "DELETE /api/new%20york/ HTTP/1.1" 405 0
+WARNING 2022-09-09 10:11:07,682 base Method Not Allowed (DELETE): /api/new york/
+WARNING 2022-09-09 10:11:07,683 log Method Not Allowed: /api/new york/
+WARNING 2022-09-09 10:11:07,683 basehttp "DELETE /api/new%20york/ HTTP/1.1" 405 0
+WARNING 2022-09-09 10:11:43,128 base Method Not Allowed (DELETE): /api/new jersey/
+WARNING 2022-09-09 10:11:43,129 log Method Not Allowed: /api/new jersey/
+WARNING 2022-09-09 10:11:43,129 basehttp "DELETE /api/new%20jersey/ HTTP/1.1" 405 0
+WARNING 2022-09-09 10:13:36,033 base Method Not Allowed (DELETE): /api/new york/
+WARNING 2022-09-09 10:13:36,033 log Method Not Allowed: /api/new york/
+WARNING 2022-09-09 10:13:36,034 basehttp "DELETE /api/new%20york/ HTTP/1.1" 405 0
+WARNING 2022-09-09 10:14:08,328 base Method Not Allowed (DELETE): /api/new york/
+WARNING 2022-09-09 10:14:08,329 log Method Not Allowed: /api/new york/
+WARNING 2022-09-09 10:14:08,329 basehttp "DELETE /api/new%20york/ HTTP/1.1" 405 0
+WARNING 2022-09-09 10:14:37,905 log Not Found: /api/batangas/
+WARNING 2022-09-09 10:14:37,906 basehttp "GET /api/batangas/ HTTP/1.1" 404 6391
+WARNING 2022-09-09 10:17:14,498 base Method Not Allowed (DELETE): /api/new york/
+WARNING 2022-09-09 10:17:14,498 log Method Not Allowed: /api/new york/
+WARNING 2022-09-09 10:17:14,499 basehttp "DELETE /api/new%20york/ HTTP/1.1" 405 0
+WARNING 2022-09-09 10:19:21,938 base Method Not Allowed (DELETE): /api/new york/
+WARNING 2022-09-09 10:19:21,938 log Method Not Allowed: /api/new york/
+WARNING 2022-09-09 10:19:21,939 basehttp "DELETE /api/new%20york/ HTTP/1.1" 405 0
+WARNING 2022-09-09 10:19:25,240 base Method Not Allowed (DELETE): /api/new york/
+WARNING 2022-09-09 10:19:25,241 log Method Not Allowed: /api/new york/
+WARNING 2022-09-09 10:19:25,242 basehttp "DELETE /api/new%20york/ HTTP/1.1" 405 0
+WARNING 2022-09-09 10:19:27,272 base Method Not Allowed (DELETE): /api/new jersey/
+WARNING 2022-09-09 10:19:27,273 log Method Not Allowed: /api/new jersey/
+WARNING 2022-09-09 10:19:27,273 basehttp "DELETE /api/new%20jersey/ HTTP/1.1" 405 0
+ERROR 2022-09-09 10:20:16,712 log Internal Server Error: /api/newyork/
+Traceback (most recent call last):
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 271, in delete
+    return self.destroy(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\mixins.py", line 90, in destroy
+    instance = self.get_object()
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.MultipleObjectsReturned(
+weatherapp.models.City.MultipleObjectsReturned: get() returned more than one City -- it returned 2!
+ERROR 2022-09-09 10:20:16,723 basehttp "DELETE /api/newyork/ HTTP/1.1" 500 116182
+ERROR 2022-09-09 10:20:29,006 log Internal Server Error: /api/newyork/
+Traceback (most recent call last):
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 271, in delete
+    return self.destroy(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\mixins.py", line 90, in destroy
+    instance = self.get_object()
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.MultipleObjectsReturned(
+weatherapp.models.City.MultipleObjectsReturned: get() returned more than one City -- it returned 2!
+ERROR 2022-09-09 10:20:29,006 basehttp "DELETE /api/newyork/ HTTP/1.1" 500 116182
+ERROR 2022-09-09 10:21:00,183 log Internal Server Error: /api/newyork/
+Traceback (most recent call last):
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 268, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.MultipleObjectsReturned(
+weatherapp.models.City.MultipleObjectsReturned: get() returned more than one City -- it returned 2!
+ERROR 2022-09-09 10:21:00,186 basehttp "GET /api/newyork/ HTTP/1.1" 500 116153
+WARNING 2022-09-09 10:22:41,409 log Not Found: /api/newyork/
+WARNING 2022-09-09 10:22:41,410 basehttp "GET /api/newyork/ HTTP/1.1" 404 6384
+WARNING 2022-09-09 10:23:44,913 log Bad Request: /api/
+WARNING 2022-09-09 10:23:44,913 basehttp "POST /api/ HTTP/1.1" 400 44
+WARNING 2022-09-09 10:28:07,109 log Bad Request: /api/
+WARNING 2022-09-09 10:28:07,109 basehttp "POST /api/ HTTP/1.1" 400 48
+WARNING 2022-09-09 10:28:54,591 log Bad Request: /api/
+WARNING 2022-09-09 10:28:54,592 basehttp "POST /api/ HTTP/1.1" 400 48
+WARNING 2022-09-09 10:29:33,735 log Bad Request: /api/
+WARNING 2022-09-09 10:29:33,735 basehttp "POST /api/ HTTP/1.1" 400 48
+WARNING 2022-09-09 10:30:12,322 log Bad Request: /api/
+WARNING 2022-09-09 10:30:12,322 basehttp "POST /api/ HTTP/1.1" 400 48
+ERROR 2022-09-09 10:31:42,628 log Internal Server Error: /api/newyork/
+Traceback (most recent call last):
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 271, in delete
+    return self.destroy(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\mixins.py", line 90, in destroy
+    instance = self.get_object()
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.MultipleObjectsReturned(
+weatherapp.models.City.MultipleObjectsReturned: get() returned more than one City -- it returned 3!
+ERROR 2022-09-09 10:31:42,638 basehttp "DELETE /api/newyork/ HTTP/1.1" 500 116426
+ERROR 2022-09-09 10:31:56,480 log Internal Server Error: /api/newyork/
+Traceback (most recent call last):
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 268, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\shiva\environment\assignenv\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.MultipleObjectsReturned(
+weatherapp.models.City.MultipleObjectsReturned: get() returned more than one City -- it returned 3!
+ERROR 2022-09-09 10:31:56,487 basehttp "GET /api/newyork/ HTTP/1.1" 500 116397
+WARNING 2022-09-09 10:33:27,501 log Bad Request: /api/
+WARNING 2022-09-09 10:33:27,502 basehttp "POST /api/ HTTP/1.1" 400 8585
+WARNING 2022-09-09 10:35:38,215 log Bad Request: /api/
+WARNING 2022-09-09 10:35:38,215 basehttp "POST /api/ HTTP/1.1" 400 48
+WARNING 2022-09-09 10:36:44,858 log Bad Request: /api/
+WARNING 2022-09-09 10:36:44,858 basehttp "POST /api/ HTTP/1.1" 400 48
+WARNING 2022-09-09 10:38:42,730 log Bad Request: /api/
+WARNING 2022-09-09 10:38:42,730 basehttp "POST /api/ HTTP/1.1" 400 48
+WARNING 2022-09-09 10:41:20,591 log Bad Request: /api/
+WARNING 2022-09-09 10:41:20,592 basehttp "POST /api/ HTTP/1.1" 400 48
+WARNING 2022-09-09 10:41:24,060 log Bad Request: /api/
+WARNING 2022-09-09 10:41:24,061 basehttp "POST /api/ HTTP/1.1" 400 48
+WARNING 2022-09-09 10:42:36,396 log Not Found: /api/manila/
+WARNING 2022-09-09 10:42:36,396 basehttp "DELETE /api/manila/ HTTP/1.1" 404 23
+WARNING 2022-09-09 10:42:53,489 log Not Found: /api/utah/
+WARNING 2022-09-09 10:42:53,489 basehttp "DELETE /api/utah/ HTTP/1.1" 404 23
+WARNING 2022-09-09 10:43:36,212 log Not Found: /api/manila/
+WARNING 2022-09-09 10:43:36,212 basehttp "DELETE /api/manila/ HTTP/1.1" 404 23
+WARNING 2022-09-09 10:44:24,932 log Not Found: /api/manila/
+WARNING 2022-09-09 10:44:24,932 basehttp "DELETE /api/manila/ HTTP/1.1" 404 23
+WARNING 2022-09-09 10:44:52,251 log Bad Request: /api/
+WARNING 2022-09-09 10:44:52,251 basehttp "POST /api/ HTTP/1.1" 400 48
+WARNING 2022-09-09 10:45:23,836 log Not Found: /api/utah/
+WARNING 2022-09-09 10:45:23,836 basehttp "DELETE /api/utah/ HTTP/1.1" 404 23
+WARNING 2022-09-09 10:55:17,411 log Bad Request: /api/
+WARNING 2022-09-09 10:55:17,411 basehttp "POST /api/ HTTP/1.1" 400 48
+WARNING 2022-09-09 10:55:20,336 log Bad Request: /api/
+WARNING 2022-09-09 10:55:20,336 basehttp "POST /api/ HTTP/1.1" 400 48
+WARNING 2022-09-09 11:10:52,416 log Bad Request: /api/
