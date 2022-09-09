@@ -23,7 +23,7 @@
                 <div class="card-body p-4">
                   <div class="d-flex">
                     <h6 class="flex-grow-1">
-                      {{ info.name }}, {{ info.sys.country }} {{ index }}
+                      {{ info.name }}, {{ info.sys.country }}
                     </h6>
                     <i
                       @click="deleteCity(info, index)"
@@ -133,7 +133,6 @@ export default {
       let endpoint = `/api/${info.name.replace(/ /g, "").toLowerCase()}/`;
       try {
         const response2 = await axios.delete(endpoint);
-        // location.reload();
         this.infos.splice(index, 1);
         console.log(info);
         console.log(endpoint);
@@ -143,15 +142,6 @@ export default {
         console.log(error);
       }
     },
-    // async getWeather() {
-    //   let endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${this.city_query}&units=metric&appid=50fa221d32e710d1045aad7ee9da01a8`;
-
-    //   try {
-    //     const response = await axios.get(endpoint);
-    //     console.log(response);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
     // },
     async getPreviousWeather() {
       let endpoint = "/api/";
@@ -165,7 +155,6 @@ export default {
             `https://api.openweathermap.org/data/2.5/weather?q=${this.cities[i].city_name}&units=metric&appid=50fa221d32e710d1045aad7ee9da01a8`
           );
           this.infos.push(response2.data);
-          // console.log(response2.data.weathers);
         }
         console.log(this.infos);
       } catch (error) {
@@ -193,6 +182,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1em;
+  grid-auto-rows: minmax(100px, auto);
 }
 .flex {
   display: flex;
@@ -209,5 +199,46 @@ export default {
   position: relative;
   top: 50%;
   transform: translateY(50%);
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 480px) and (max-width: 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+  }
+}
+@media (min-width: 601px) and (max-width: 800px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+  }
+}
+@media (min-width: 801px) and (max-width: 1025px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+  }
+  .card {
+    width: 350px;
+  }
+  .wrapper > div:nth-child(odd) {
+    justify-self: end;
+  }
+}
+@media (min-width: 1026px) and (max-width: 1200px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+  }
 }
 </style>
