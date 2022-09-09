@@ -13,7 +13,7 @@ class CitySerializer(serializers.ModelSerializer):
         'city_name': {
             'validators': [
                 UniqueValidator(
-                    queryset=City.objects.all()
+                    queryset=City.objects.all(), message="You've already added this city", 
                 )
             ]
         }

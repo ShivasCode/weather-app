@@ -18,15 +18,15 @@
       <div class="container">
         <div class="">
           <div class="wrapper">
-            <div v-for="info in infos">
+            <div v-for="(info, index) in infos">
               <div class="card" style="color: #4b515d; border-radius: 35px">
                 <div class="card-body p-4">
                   <div class="d-flex">
                     <h6 class="flex-grow-1">
-                      {{ info.name }}, {{ info.sys.country }}
+                      {{ info.name }}, {{ info.sys.country }} {{ index }}
                     </h6>
                     <i
-                      @click="deleteCity(info)"
+                      @click="deleteCity(info, index)"
                       class="fa fa-trash"
                       aria-hidden="true"
                       style="cursor: pointer"
@@ -111,25 +111,34 @@ export default {
       try {
         const response1 = await axios.get(endpoint1);
         const response2 = await axios.post(endpoint2, {
-          city_name: this.city_query,
+          city_name: this.city_query.toLowerCase(),
         });
         this.city_query = null;
         if (this.error) {
           this.error = null;
         }
         this.infos.unshift(response1.data);
+        console.log(response1);
+        console.log(response2);
       } catch (error) {
         console.log(error);
-        if (error.response) {
+        if (error.response.status == 404) {
           this.error = error.response.data.message;
+        } else {
+          this.error = error.response.data.city_name[0];
         }
       }
     },
-    async deleteCity(info) {
-      let endpoint = `/api/${info.name.toLowerCase()}/`;
+    async deleteCity(info, index) {
+      let endpoint = `/api/${info.name.replace(/ /g, "").toLowerCase()}/`;
       try {
         const response2 = await axios.delete(endpoint);
-        location.reload();
+        // location.reload();
+        this.infos.splice(index, 1);
+        console.log(info);
+        console.log(endpoint);
+        console.log(index);
+        console.log(response2);
       } catch (error) {
         console.log(error);
       }
