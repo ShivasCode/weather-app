@@ -21,8 +21,17 @@
       src="https://kit.fontawesome.com/d57f7428ad.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      .bg-color {
+        background-image: radial-gradient(
+          circle farthest-corner at 10% 20%,
+          rgba(97, 186, 255, 1) 0%,
+          rgba(166, 239, 253, 1) 90.1%
+        );
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-color">
     <noscript>
       <strong
         >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
