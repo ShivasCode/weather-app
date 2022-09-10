@@ -23,15 +23,17 @@ class CityViewSetTestCase(APITestCase):
     def test_city_detail_get(self):
         response = self.client.get(reverse('city-detail', kwargs={'slug':'utah'}))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        print(self.setUp)
-    
+        self.assertEqual(response.data['city_name'], 'Utah')
     def test_city_detail_delete(self):
         response = self.client.delete(reverse('city-detail', kwargs={'slug':'utah'}))
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
+    def test_city_post_unique(self):
+        data = {'city_name': 'Utah'}
+        response = self.client.post('/api/', data)
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
     def test_city_post(self):
-        data = {'city_name': 'utah'}
+        data = {'city_name': 'Manila'}
         response = self.client.post('/api/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-    
-    
